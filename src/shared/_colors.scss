@@ -1,0 +1,23 @@
+$beige: #F2EDC0; //PANTONE 9141C
+$green: #476A30; //PANTONE TREETOP
+$black: #2D2926; //PANTONE BLACK C
+
+$red: #D14124; //PANTONE PMS 7597 C
+$blue: #0F4C81; //PANTONE CLASSIC BLUE
+$yellow: #FFB000; //PANTONE GOLD FUSION
+$orange: #FE5000; //PANTONE ORANGE 021C
+$lightGreen: #88B04B; //PANTONE GREENERY
+
+/** Primary Color */
+$color-primary: $green !default;
+
+/** Primary Label Color */
+$color-plabel: $black !default;
+$color-plabel-inverted: $beige !default;
+
+/** Secondary Color */
+$color-secondary: $lightGreen !default;
+
+
+/** Background Color */
+$color-pbody: $beige;

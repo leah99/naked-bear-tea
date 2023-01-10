@@ -1,0 +1,27 @@
+/** Flex Box */
+@mixin displayFlex() {
+    display: -webkit-box !important; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box !important; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox !important; /* TWEENER - IE 10 */
+    display: -webkit-flex !important; /* NEW - Chrome */
+    display: flex !important; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+/** Media Queries */
+@mixin mobile {
+    @media only screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: 481px) and (max-width: 1024px) {
+      @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+      @content;
+    }
+}
