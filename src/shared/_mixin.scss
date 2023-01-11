@@ -9,19 +9,25 @@
 
 /** Media Queries */
 @mixin mobile {
-    @media only screen and (max-width: 480px) {
+    @media (max-width: 599px) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    @media (min-width: 600px) and (max-width: 1024px) {
       @content;
     }
 }
 
 @mixin desktop {
-    @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    @media (min-width: 1025px) {
       @content;
+    }
+}
+
+@mixin big-desktop {
+    @media (min-width: 1281px) {
+        @content;
     }
 }
