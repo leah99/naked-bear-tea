@@ -1,3 +1,4 @@
+@import 'mixin';
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300;400;500;600;700&family=Patrick+Hand&display=swap');
 
 h1, h2, h3, th {
@@ -6,4 +7,28 @@ h1, h2, h3, th {
 
 p, body, p, ul, li, tr, input {
     font-family: 'Patrick Hand', cursive;
+}
+
+@include mobile {
+    nav {
+        font-size: 2em;
+    }
+}
+
+@include tablet {
+    nav {
+        font-size: 2em;
+    }
+}
+
+@include desktop {
+    nav {
+        font-size: 1.5em;
+    }
+}
+
+@include big-desktop {
+    nav {
+        font-size: 1.5em;
+    }
 }
