@@ -8,16 +8,20 @@ $yellow: #FFB000; //PANTONE GOLD FUSION
 $orange: #FE5000; //PANTONE ORANGE 021C
 $lightGreen: #88B04B; //PANTONE GREENERY
 
-/** Primary Color */
+$semi-opaque-black: rgba(0, 0, 0, 0.20);
+
+/* Primary Color */
 $color-primary: $green !default;
 
-/** Primary Label Color */
+/* Primary Label Color */
 $color-plabel: $black !default;
 $color-plabel-inverted: $beige !default;
 
-/** Secondary Color */
+/* Secondary Color */
 $color-secondary: $lightGreen !default;
 
-
-/** Background Color */
+/* Background Color */
 $color-pbody: $beige;
+
+/* Overlay Color */
+$color-overlay: $semi-opaque-black;
