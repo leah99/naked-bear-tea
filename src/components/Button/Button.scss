@@ -1,0 +1,98 @@
+@import '../../shared/styles.scss';
+
+$button-height-default: 3em;
+$button-padding-default: 0em 2.5em;
+$button-border-radius-default: 1.5em;
+$button-font-default: 1.2em;
+$button-scale: 1.1;
+
+/* CSS for slide-in next animation */
+$icon-padding: 0 20px;
+$text-indent: -10px;
+
+.button {
+    display: inline-block;
+    position: relative;
+    border: none;
+    height: $button-height-default;
+    padding: $button-padding-default;
+    border-radius: $button-border-radius-default;
+    color: $color-plabel-inverted;
+    background-color: $color-primary;
+    cursor: pointer;
+    overflow: hidden; /* Hover animation */
+    transition: all 0.2s linear 0s; /* Hover animation */
+
+    &:hover {
+        color: $color-plabel-inverted;
+        background-color: $color-secondary;
+    }
+
+    &:active {
+        scale: $button-scale;
+    }
+
+    &--outline {
+        border: 3px solid $color-primary;
+        color: $color-primary;
+        background-color: inherit;
+
+        &:hover {
+            border: 3px solid $color-secondary;
+            color: $color-secondary;
+            background-color: inherit;
+        }
+    }
+
+    &--slide-in-animation {
+        &::after {
+            content: "➔";
+            position: absolute;
+            @include displayFlex();
+            align-items: center;
+            justify-content: flex-end;
+            padding: $icon-padding;
+            top: 0px;
+            right: 100%;
+            width: 100%;
+            height: 100%;
+            transition: all 0.2s linear 0s;
+        }
+    
+        &:hover {
+            text-indent: $text-indent;
+            background-color: $color-secondary;
+            &::after {
+                right: 0;
+            }
+        }
+    }
+
+    &--disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &--secondary {
+        background-color: $color-plabel;
+
+        &:hover {
+            background-color: $color-primary;
+        }
+
+        &.button--outline {
+            background-color: inherit;
+            border: 3px solid $color-plabel;
+            color: $color-plabel;
+
+            &:hover {
+                border: 3px solid $color-primary;
+                color: $color-primary;
+            }
+        }
+
+        &.button--slide-in-animation:hover {
+            background-color: $color-primary;
+        }
+    }
+}
