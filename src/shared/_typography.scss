@@ -5,7 +5,7 @@ h1, h2, h3, th {
     font-family: 'Josefin Slab', serif;
 }
 
-p, body, p, ul, li, tr, input {
+p, body, p, ul, li, tr, input, button {
     font-family: 'Patrick Hand', cursive;
 }
 
@@ -13,11 +13,17 @@ p, body, p, ul, li, tr, input {
     nav {
         font-size: 2em;
     }
+    button {
+        font-size: 1.3em;
+    }
 }
 
 @include tablet {
     nav {
         font-size: 2em;
+    }
+    button {
+        font-size: 1.3em;
     }
 }
 
@@ -25,10 +31,16 @@ p, body, p, ul, li, tr, input {
     nav {
         font-size: 1.5em;
     }
+    button {
+        font-size: 1.2em;
+    }
 }
 
 @include big-desktop {
     nav {
         font-size: 1.5em;
+    }
+    button {
+        font-size: 1em;
     }
 }
